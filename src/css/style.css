@@ -187,3 +187,104 @@
             border: 2px solid #ffffff;
             cursor: pointer;
         }
+        /* --- ANIMAÇÃO DA CARTA DE AMOR (PIXEL ART) --- */
+        
+        /* Tela escura que bloqueia o fundo no início */
+        #tela-carta {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #090a0f; /* Cor do céu escuro */
+            z-index: 9999; /* Número muito alto para garantir que fique em cima de TUDO */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 1s ease; /* Para o efeito de fade-out no final */
+        }
+
+        /* O texto piscando no estilo jogo antigo */
+        .mensagem-clique {
+            font-family: 'Press Start 2P', cursive;
+            color: #fcd34d;
+            font-size: 12px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 0px #000;
+            animation: piscar 1s infinite;
+        }
+
+        @keyframes piscar {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* A caixa do envelope */
+        .envelope {
+            position: relative;
+            width: 400px;
+            height: 280px;
+            background-color: #e2e8f0; /* Cor cinza clarinho */
+            border: 4px solid #ffffff; /* Borda grossa branca */
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.8); /* Sombra 8-bits */
+        }
+
+        /* O papel da carta que vai deslizar para cima */
+        .papel-carta {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            width: 372px; /* Largura para caber dentro da borda */
+            height: 270px;
+            background-color: #ffffff;
+            border: 4px solid #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px; /* Tamanho do coração */
+            transition: transform 1s ease; /* Faz a subida ser suave */
+            z-index: 1; /* Fica atrás da frente do envelope */
+        }
+
+        /* Parte da frente do envelope (Recorte em triângulo) */
+        .frente-envelope {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Desenha os triângulos cortando as bordas */
+            border-left: 96px solid #cbd5e1;
+            border-right: 96px solid #cbd5e1;
+            border-bottom: 60px solid #94a3b8;
+            border-top: 60px solid transparent;
+            box-sizing: border-box;
+            z-index: 2; /* Fica na frente do papel da carta */
+            pointer-events: none; /* Evita que o triângulo atrapalhe o clique */
+        }
+
+        /* A aba de cima que vai se abrir */
+        .aba-envelope {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Triângulo invertido */
+            border-left: 199px solid transparent;
+            border-right: 206px solid transparent;
+            border-top: 180px solid #f8fafc;
+            transform-origin: top; /* O eixo do giro fica no topo da aba */
+            transition: transform 0.5s ease;
+            z-index: 3; /* Fica acima de todos no começo */
+            pointer-events: none;
+        }
+
+        /* Classes mágicas que o JavaScript vai adicionar */
+        .aba-aberta {
+            transform: rotateX(180deg); /* Vira a aba para trás */
+        }
+
+        .carta-subindo {
+            transform: translateY(-80px); /* Faz a carta subir 80 pixels */
+        }
