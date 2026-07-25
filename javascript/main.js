@@ -83,7 +83,11 @@ function verificarResposta(respostaEscolhida) {
                         Sinceramente, espero que tenha gostado. Eu sei que foi pouco, mas foi de coração e alma. Obrigado por ser essa garota incrível que você é e por ser uma amiga perfeita para mim. Gosto muito de você e do seu jeito.<br><br>
                         Amo quando você começa a falar e não para mais, adoro quando fica um pouco mais romântica comigo e quando solta umas safadezas. São realmente momentos que nos tornam o que somos e nos quais podemos ver que a nossa amizade é verdadeira e especial.<br><br>
                         Saiba que, mesmo que eu não mande muita mensagem, você é muito importante para mim e penso sempre em você. Lembro de todos os nossos momentos e sempre desejo mais. Não posso mentir sobre isso: queria ser ainda mais próximo, por assim dizer... mas fazer o quê, né? Querer não é poder...<br><br>
-                        Vou finalizar da melhor forma possível com o famoso: Eu te amo, minha neném! Se cuida e continue sendo minha, afinal, não tem volta!
+                        Vou finalizar da melhor forma possível com o famoso: Eu te amo, minha neném! Se cuida e continue sendo minha, afinal, não tem volta!<br><br>
+
+                        <strong>Com amor,</strong><br>
+                        <strong>Seu amigo,</strong><br>
+                        <strong>Hiago. ❤️</strong> 
                     </p>`
                 }
         }
