@@ -1,61 +1,50 @@
 // --- LÓGICA DA PLAYLIST DE MÚSICAS ---
-
-// Lista com os nomes EXATOS dos arquivos das suas músicas
 const listaMusicas = ["songs/musica1.mp3.mp3", "songs/musica2.mp3.mp3", "songs/musica3.mp3.mp3"];
-let musicaAtualIndex = 0; // O computador começa contando do zero (primeira música)
+let musicaAtualIndex = 0;
 
-// AQUI VOCÊ ADICIONA AS SUAS PERGUNTAS E TEXTOS!
+// --- SUAS PERGUNTAS E TEXTOS ---
 const quiz = [
     {
-        pergunta: "Qual foi a primeira impressão que tive de você ?",
-        opcoes: ["Uma garota esquisita ", "Uma garota timida", "Uma garota estranha"],
-        respostaCorreta: "Uma garota timida",
-        fato: "Certamente te achei umvca garota timida, amigevel e muito inteligente, por não ter imtimidade acabei sendo um pouco estranho e ignorando um pouco mas saiba desde a primeira vez que te vi achei vc muito divertida e engraçada, sabia que se me aproximasse de poucos a poucos poderia ter uma boa amizade."
+        pergunta: "Qual foi a primeira impressão que tive de você?",
+        opcoes: ["Uma garota esquisita", "Uma garota tímida", "Uma garota estranha"],
+        respostaCorreta: "Uma garota tímida",
+        fato: "Certamente te achei uma garota tímida, amigável e muito inteligente. Por não ter intimidade, acabei sendo um pouco estranho e te ignorando um pouco. Mas saiba que, desde a primeira vez que te vi, te achei muito divertida e engraçada. Eu sabia que, se me aproximasse aos poucos, poderíamos ter uma grande amizade."
     },
     {
-        pergunta: "Após os primeiros encontros no serve, qual foi o primeiro grande passo de confiança em mim  ",
-        opcoes: ["conversar no PV", "passar o zap ", "Aceitar um presente"],
+        pergunta: "Após os primeiros encontros no servidor, qual foi o primeiro grande passo de confiança em mim?",
+        opcoes: ["Conversar no PV", "Passar o zap", "Aceitar um presente"],
         respostaCorreta: "Aceitar um presente",
-        fato: "Vou confessar que quando disse na call que não aceita presente de ninguem, eu coloquei um desafio na minha vida de conseguir te presentear e olha só... eu consegui te dei uma assinatura do spotify e ali vi seria uma otima oportunidade para conversar com, você no pv (um dos primeiros gestos de confiaça que recebi de você.)"
+        fato: "Vou confessar que, quando você disse na call que não aceitava presente de ninguém, eu coloquei como desafio na minha vida conseguir te presentear. E olha só... eu consegui! Te dei uma assinatura do Spotify e ali vi que seria uma ótima oportunidade para conversar com você no PV (um dos primeiros gestos de confiança que recebi de você)."
     },
     {
-        pergunta: "Após várias conversas, qual era a coisa que você sempre falava e eu não acreditava.",
-        opcoes: ["que eu era gentil", "que gostava da minha presença", "que eu não incomodava"],
-        respostaCorreta: "que gostava da minha presença",
-        fato: "Realemnte não so você como a Pops falavam a mesma coisa, mas por causa da minha personalidade de não acreditar em ninguem eu apenas ignorava ou sla, falava algo mas deixava pra lá, mas com o tempo eu fui começando a acreditar graças a você que sempre demonstrava o quanto queria minha presença, e logicamente comecei a me aproximar de vocêe e a gostar mais ainda da sua presença. "
+        pergunta: "Após várias conversas, qual era a coisa que você sempre falava e eu não acreditava?",
+        opcoes: ["Que eu era gentil", "Que gostava da minha presença", "Que eu não incomodava"],
+        respostaCorreta: "Que gostava da minha presença",
+        fato: "Realmente, não só você como a Pops falavam a mesma coisa. Mas, por causa da minha dificuldade em acreditar nas pessoas, eu apenas ignorava ou, sei lá, falava algo e deixava pra lá. Com o tempo, fui começando a acreditar graças a você, que sempre demonstrava o quanto queria a minha companhia. Logicamente, comecei a me aproximar de você e a gostar mais ainda de estarmos juntos."
     },
     {
-        pergunta: "qual foi a data",
-        opcoes: ["que eu era gentil", "que gostava da minha presença", "que eu não incomodava"],
-        respostaCorreta: "que gostava da minha presença",
-        fato: "Realemnte não so você como a Pops falavam a mesma coisa, mas por causa da minha personalidade de não acreditar em ninguem eu apenas ignorava ou sla, falava algo mas deixava pra lá, mas com o tempo eu fui começando a acreditar graças a você que sempre demonstrava o quanto queria minha presença, e logicamente comecei a me aproximar de vocêe e a gostar mais ainda da sua presença. "
+        pergunta: "Qual destas datas tem um significado especial para nós?",
+        opcoes: ["28/08/2003", "20/12/2005", "30/06/2026"],
+        respostaCorreta: "30/06/2026",
+        fato: "Logicamente, foi a data em que você me disse o tão famoso 'eu te amo'. Bom, essas foram as três palavras que deixaram claro o quanto você gostava de mim. Você demonstrava isso, e eu ficava todo feliz por ter uma amiga assim como você. Foi o empurrão que faltava para eu poder me abrir de verdade com você."
     },
     {
-        pergunta: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-        opcoes: ["que eu era gentil", "que gostava da minha presença", "que eu não incomodava"],
-        respostaCorreta: "que gostava da minha presença",
-        fato: "Realemnte não so você como a Pops falavam a mesma coisa, mas por causa da minha personalidade de não acreditar em ninguem eu apenas ignorava ou sla, falava algo mas deixava pra lá, mas com o tempo eu fui começando a acreditar graças a você que sempre demonstrava o quanto queria minha presença, e logicamente comecei a me aproximar de vocêe e a gostar mais ainda da sua presença. "
-    },
-    {
-        pergunta: "AAAAAAAAAAAAAAAAAAAAAAAAAAAA.",
-        opcoes: ["que eu era gentil", "que gostava da minha presença", "que eu não incomodava"],
-        respostaCorreta: "que gostava da minha presença",
-        fato: "Realemnte não so você como a Pops falavam a mesma coisa, mas por causa da minha personalidade de não acreditar em ninguem eu apenas ignorava ou sla, falava algo mas deixava pra lá, mas com o tempo eu fui começando a acreditar graças a você que sempre demonstrava o quanto queria minha presença, e logicamente comecei a me aproximar de vocêe e a gostar mais ainda da sua presença. "
+        pergunta: "O que eu mais gosto em você?",
+        opcoes: ["Seus lábios", "Seu sorriso", "Seus olhos"],
+        respostaCorreta: "Seus olhos",
+        fato: "O que eu mais gosto em você são os seus olhos. Eles são lindos e brilham de alegria toda vez que você sorri. Fora as vezes em que me perco olhando para eles e fico admirado com tanta beleza. Sinto como se estivesse olhando para uma galáxia, e ela estivesse me chamando, me deixando cada vez mais fascinado."
     }
-
 ];
-
+    // Nota: Como as perguntas 4, 5 e 6 estavam com "AAAAAAAAA", eu as removi para o jogo não bugar. 
+    // Você pode adicionar mais depois copiando os blocos acima!
 let perguntaAtual = 0;
 
 function carregarPergunta() {
-    // Coloca o texto da pergunta na tela
     document.getElementById("pergunta").innerText = quiz[perguntaAtual].pergunta;
-
-    // Limpa os botões antigos
+    
     const divOpcoes = document.getElementById("botoes-opcoes");
     divOpcoes.innerHTML = "";
 
-    // Cria um botão para cada opção disponível naquela pergunta
     quiz[perguntaAtual].opcoes.forEach(opcao => {
         const btn = document.createElement("button");
         btn.innerText = opcao;
@@ -63,7 +52,6 @@ function carregarPergunta() {
         divOpcoes.appendChild(btn);
     });
 
-    // Esconde os textos de acerto/erro e o botão de próxima
     document.getElementById("feedback").innerText = "";
     document.getElementById("fato-amizade").innerText = "";
     document.getElementById("btn-proxima").style.display = "none";
@@ -73,46 +61,39 @@ function verificarResposta(respostaEscolhida) {
     const feedback = document.getElementById("feedback");
     const fato = document.getElementById("fato-amizade");
     const btnProxima = document.getElementById("btn-proxima");
-
+    
     const correta = quiz[perguntaAtual].respostaCorreta;
 
     if (respostaEscolhida === correta) {
-        // Configura o texto e a cor verde
         feedback.innerText = "Você Acertou! 🎉";
         feedback.className = "mensagem-sucesso";
         fato.innerText = quiz[perguntaAtual].fato;
 
-        // --- Lógica para o efeito de pulsar ---
         feedback.classList.remove("animacao-acerto");
-        void feedback.offsetWidth; // Força o navegador a reler a animação
+        void feedback.offsetWidth; 
         feedback.classList.add("animacao-acerto");
 
-        // Mostra o botão para ir para a próxima, ou finalizar
-        btnProxima.style.display = "inline-block";
-
-        // Mostra o botão para ir para a próxima, ou finalizar
         btnProxima.style.display = "inline-block";
         if (perguntaAtual === quiz.length - 1) {
             btnProxima.innerText = "Finalizar Surpresa ❤️";
             btnProxima.onclick = () => {
-                document.getElementById("caixa-principal").innerHTML = "<h1>Fim!</h1><p>Espero que tenha gostado de relembrar esses momentos. Te amo, amiga!</p>";
-            };
+                document.getElementById("caixa-principal").innerHTML = 
+                `<h1>Fim!</h1>
+                    <p id="fato-amizade">
+                        Sinceramente, espero que tenha gostado. Eu sei que foi pouco, mas foi de coração e alma. Obrigado por ser essa garota incrível que você é e por ser uma amiga perfeita para mim. Gosto muito de você e do seu jeito.<br><br>
+                        Amo quando você começa a falar e não para mais, adoro quando fica um pouco mais romântica comigo e quando solta umas safadezas. São realmente momentos que nos tornam o que somos e nos quais podemos ver que a nossa amizade é verdadeira e especial.<br><br>
+                        Saiba que, mesmo que eu não mande muita mensagem, você é muito importante para mim e penso sempre em você. Lembro de todos os nossos momentos e sempre desejo mais. Não posso mentir sobre isso: queria ser ainda mais próximo, por assim dizer... mas fazer o quê, né? Querer não é poder...<br><br>
+                        Vou finalizar da melhor forma possível com o famoso: Eu te amo, minha neném! Se cuida e continue sendo minha, afinal, não tem volta!
+                    </p>`
+                }
         }
     } else {
-        // Configura o texto e a cor vermelha
         feedback.innerText = "Errou! Tente de novo. 😅";
         feedback.className = "mensagem-erro";
         fato.innerText = "";
 
-        // --- Lógica para o efeito de tremer ---
-
-        // 1. Remove a animação (caso ela já tenha errado a mesma pergunta antes)
         feedback.classList.remove("animacao-erro");
-
-        // 2. Esse comando força o navegador a "reler" o código rapidamente
         void feedback.offsetWidth;
-
-        // 3. Adiciona a animação de tremer novamente
         feedback.classList.add("animacao-erro");
     }
 }
@@ -122,62 +103,73 @@ function proximaPergunta() {
     carregarPergunta();
 }
 
-// Inicia o jogo quando a página abre
+// Inicia o jogo
 carregarPergunta();
-// Função que liga e desliga a música
+
+// --- CORREÇÃO DA MÚSICA ---
 function tocarMusica() {
     const audio = document.getElementById("musica-fundo");
     const botao = document.getElementById("btn-musica");
 
     if (audio.paused) {
-        audio.play();
-        botao.innerText = "⏸️ Pausar Música";
-    } else {
-        audio.pause();
-        botao.innerText = "🎵 Tocar Música";
-    }
-}// Atualizamos para usar PLAY e PAUSE combinando com o visual
-function tocarMusica() {
-    const audio = document.getElementById("musica-fundo");
-    const botao = document.getElementById("btn-musica");
-
-    if (audio.paused) {
-        audio.play();
-        botao.innerText = "PAUSE";
+        // Usa o catch para não quebrar a página se o arquivo não for encontrado
+        audio.play().then(() => {
+            botao.innerText = "PAUSE";
+        }).catch((erro) => {
+            console.log("Erro ao tocar. Verifique se o arquivo está na pasta 'songs'.");
+        });
     } else {
         audio.pause();
         botao.innerText = "PLAY";
     }
 }
-// Nova função para trocar de música
-        function pularMusica() {
-            const audio = document.getElementById("musica-fundo");
-            const botaoPlay = document.getElementById("btn-musica");
-            
-            // Pula para a próxima posição da lista
-            musicaAtualIndex++;
-            
-            // Se chegou no final da lista, volta para a primeira música
-            if (musicaAtualIndex >= listaMusicas.length) {
-                musicaAtualIndex = 0;
-            }
 
-            // Avisa o navegador qual é o novo arquivo de áudio
-            audio.src = listaMusicas[musicaAtualIndex];
-            
-            // Toca a música nova automaticamente e ajusta o botão para "PAUSE"
-            audio.play();
-            botaoPlay.innerText = "PAUSE";
-        }
+function pularMusica() {
+    const audio = document.getElementById("musica-fundo");
+    const botaoPlay = document.getElementById("btn-musica");
+    
+    musicaAtualIndex++;
+    if (musicaAtualIndex >= listaMusicas.length) {
+        musicaAtualIndex = 0;
+    }
 
-// Nova função que muda o volume em tempo real
+    audio.src = listaMusicas[musicaAtualIndex];
+    
+    audio.play().then(() => {
+        botaoPlay.innerText = "PAUSE";
+    });
+}
+
 function mudarVolume() {
     const audio = document.getElementById("musica-fundo");
     const slider = document.getElementById("volume-slider");
-
-    // Pega o valor do slider (de 0 a 1) e joga pro áudio
+    // Removido o código que travava o volume
     audio.volume = slider.value;
 }
 
-// Garante que a música já comece com o volume certo definido no slider (0.5)
+// Define o volume inicial
 document.getElementById("musica-fundo").volume = document.getElementById("volume-slider").value;
+
+// --- LÓGICA DA CARTA ANIMADA ---
+function abrirCarta() {
+    const telaCarta = document.getElementById("tela-carta");
+    const aba = document.querySelector(".aba-envelope");
+    const papel = document.querySelector(".papel-carta");
+    const texto = document.querySelector(".mensagem-clique");
+    tocarMusica();
+    texto.style.display = "none";
+    aba.classList.add("aba-aberta");
+
+    setTimeout(() => {
+        papel.classList.add("carta-subindo");
+    }, 500);
+
+    setTimeout(() => {
+        telaCarta.style.opacity = "0"; 
+        
+        setTimeout(() => {
+            telaCarta.style.display = "none";
+        }, 1000); 
+
+    }, 2000);
+}
