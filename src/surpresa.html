@@ -10,22 +10,16 @@
 </head>
 
 <body>
-    <audio id="musica-fundo" loop>
-        <source src="songs/musica1.mp3.mp3" type="audio/mpeg" />
+    <audio id="musica-fundo"  loop>
+       <source src="songs/musica1.mp3.mp3" type="audio/mpeg">
     </audio>
-
-    <!-- Novo Painel de Controle de Música Estilo Retro com Botão NEXT -->
-    <div id="painel-musica">
-        
-        <!-- Caixinha para colocar os dois botões lado a lado -->
-        <div id="botoes-musica">
-            <button id="btn-musica" onclick="tocarMusica()">PLAY</button>
-            <button id="btn-proxima-musica" onclick="pularMusica()">NEXT</button>
-        </div>
-
-        <div id="controle-volume">
-            <span id="texto-vol">VOL</span>
-            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" oninput="mudarVolume()">
+    <!-- TELA DE ABERTURA: CARTA ANIMADA -->
+    <div id="tela-carta" onclick="abrirCarta()">
+        <div class="mensagem-clique">CLIQUE NA CARTA PARA ABRIR</div>
+        <div class="envelope">
+            <div class="aba-envelope"></div>
+            <div class="frente-envelope"></div>
+            <div class="papel-carta">❤️</div>
         </div>
     </div>
     <!-- AQUI FICA A ESTRUTURA DA TELA (HTML) -->
@@ -44,7 +38,22 @@
             Próxima Pergunta ➔
         </button>
     </div>
+    
 
+    <!-- Novo Painel de Controle de Música Estilo Retro com Botão NEXT -->
+    <div id="painel-musica">
+        
+        <!-- Caixinha para colocar os dois botões lado a lado -->
+        <div id="botoes-musica">
+            <button id="btn-musica" onclick="tocarMusica()">PLAY</button>
+            <button id="btn-proxima-musica" onclick="pularMusica()">NEXT</button>
+        </div>
+
+        <div id="controle-volume">
+            <span id="texto-vol">VOL</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" oninput="mudarVolume()">
+        </div>
+    </div>
     <!-- AQUI FICA A LÓGICA DO JOGO (JAVASCRIPT) -->
     <script src="javascript/main.js"></script>
 </body>
