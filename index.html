@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>presente para minha amiga!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adicione esta linha para a fonte Pixelada -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/style.css" />]
+</head>
+
+<body>
+    <audio id="musica-fundo"  loop>
+       <source src="src/songs/musica1.mp3.mp3" type="audio/mpeg">
+    </audio>
+    <!-- TELA DE ABERTURA: CARTA ANIMADA -->
+    <div id="tela-carta" onclick="abrirCarta()">
+        <div class="mensagem-clique">CLIQUE NA CARTA PARA ABRIR</div>
+        <div class="envelope">
+            <div class="aba-envelope"></div>
+            <div class="frente-envelope"></div>
+            <div class="papel-carta">❤️</div>
+        </div>
+    </div>
+    <!-- AQUI FICA A ESTRUTURA DA TELA (HTML) -->
+    <div id="caixa-principal">
+        <h1>Para minha amiga Marcy</h1>
+        <h2 id="pergunta">Carregando pergunta...</h2>
+
+        <div id="botoes-opcoes">
+            <!-- Os botões vão aparecer aqui automaticamente -->
+        </div>
+
+        <p id="feedback"></p>
+        <p id="fato-amizade"></p>
+
+        <button id="btn-proxima" style="display: none" onclick="proximaPergunta()">
+            Próxima Pergunta ➔
+        </button>
+    </div>
+    
+
+    <!-- Novo Painel de Controle de Música Estilo Retro com Botão NEXT -->
+    <div id="painel-musica">
+        
+        <!-- Caixinha para colocar os dois botões lado a lado -->
+        <div id="botoes-musica">
+            <button id="btn-musica" onclick="tocarMusica()">PLAY</button>
+            <button id="btn-proxima-musica" onclick="pularMusica()">NEXT</button>
+        </div>
+
+        <div id="controle-volume">
+            <span id="texto-vol">VOL</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" oninput="mudarVolume()">
+        </div>
+    </div>
+    <!-- AQUI FICA A LÓGICA DO JOGO (JAVASCRIPT) -->
+    <script src="src/javascript/main.js"></script>
+</body>
+
+</html>
