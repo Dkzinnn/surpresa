@@ -1,0 +1,189 @@
+  /* Fundo do céu noturno com degradê circular */
+        body {
+            background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+            font-family: 'Verdana', sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: #f8fafc; /* Texto claro para contrastar com o escuro */
+            min-height: 100vh;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            
+        }
+
+        /* Caixa principal com visual de vidro escuro (Dark Glassmorphism) */
+        #caixa-principal {
+            background-color: rgba(20, 30, 48, 0.6); /* Azul muito escuro e meio transparente */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Bordinha bem suave */
+            border-radius: 15px; 
+            padding: 40px;
+            /* Sombra azulada que imita um brilho noturno */
+            box-shadow: 0 0 20px rgba(120, 160, 255, 0.2); 
+            max-width: 500px; 
+            margin: 0 auto; 
+            animation: fadeIn 1.5s ease-out; /* Aquela animação suave de entrada */
+            
+        }
+
+        /* Título brilhando como uma estrela amarela */
+        h1 {
+            color: #fcd34d; /* Amarelo estrela */
+            text-shadow: 0 0 10px rgba(252, 211, 77, 0.5); /* Efeito de luz/brilho ao redor da letra */
+        }
+
+        /* Foto de vocês (caso tenha adicionado) com borda combinando */
+        .minha-foto {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fcd34d; /* Borda amarela combinando com o título */
+            box-shadow: 0 0 15px rgba(252, 211, 77, 0.3);
+            margin-bottom: 10px;
+        }
+
+        /* Botões com tom de azul da meia-noite */
+        button {
+            background-color: #312e81; /* Azul noturno profundo */
+            color: #e0e7ff; /* Texto azul bem clarinho */
+            border: 1px solid #4f46e5;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 8px;
+            transition: 0.4s; /* Deixa a mudança de cor mais suave */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Efeito de brilho estelar quando passa o mouse no botão */
+        button:hover {
+            background-color: #4f46e5; /* Fica um azul mais vibrante */
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.8); /* O botão "acende" */
+            transform: translateY(-2px); /* O botão dá uma leve subidinha */
+        }
+
+        /* Cores das mensagens do jogo */
+        .mensagem-erro { color: #fca5a5; font-weight: bold; font-size: 18px; } /* Vermelho clarinho */
+        .mensagem-sucesso { color: #86efac; font-weight: bold; font-size: 18px; } /* Verde clarinho */
+        
+        /* O fato da amizade em um tom de azul constelação */
+        #fato-amizade { 
+            margin-top: 20px; 
+            font-style: italic; 
+            font-size: 20px;
+            color: #93c5fd; 
+            text-shadow: 0 0 8px rgba(147, 197, 253, 0.4);
+        }
+
+        /* Animação para a caixa aparecer devagar */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }/* Cria o movimento de balançar para os lados */
+        @keyframes tremer {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-10px); }
+            40%, 80% { transform: translateX(10px); }
+        }
+
+        /* Classe que aplicaremos ao texto quando errar */
+        .animacao-erro {
+            animation: tremer 0.4s ease-in-out;
+            
+        }
+/* Cria o movimento de pulsar (aumentar e brilhar) */
+        @keyframes pulsar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); text-shadow: 0 0 20px #86efac; }
+            100% { transform: scale(1); }
+        }
+
+        /* Classe que aplicaremos ao texto quando acertar */
+        .animacao-acerto {
+            animation: pulsar 0.6s ease-out;
+        }
+      /* Painel que segura o botão e o volume */
+        #painel-musica {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1a1a2e; /* Azul bem escuro */
+            border: 4px solid #ffffff; /* Borda branca grossa e reta */
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Press Start 2P', cursive; /* Aplica a fonte pixelada */
+            z-index: 1000;
+            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8); /* Sombra dura de 8-bits */
+        }
+
+       /* Organiza os botões de Play e Next lado a lado */
+        #botoes-musica {
+            display: flex;
+            gap: 10px; /* Espaço entre os dois botões */
+        }
+
+        /* O Botão de Play/Pause e o novo botão Next recebem o mesmo estilo */
+        #btn-musica, #btn-proxima-musica {
+            background-color: #fcd34d;
+            color: #000000;
+            border: 4px solid #ffffff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px #000000;
+            text-transform: uppercase;
+        }
+
+        /* Efeito de clicar afundando para AMBOS os botões */
+        #btn-musica:active, #btn-proxima-musica:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0px 0px 0px #000000;
+        }
+
+        /* Efeito de clicar no botão (ele afunda) */
+        #btn-musica:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0px 0px 0px #000000;
+        }
+
+        /* Organiza o texto e a barra de volume lado a lado */
+        #controle-volume {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #texto-vol {
+            font-size: 8px;
+            color: #ffffff;
+        }
+
+     /* Estiliza a barra de volume para ficar quadrada */
+        #volume-slider {
+            -webkit-appearance: none;
+            appearance: none; /* <-- ADICIONE ESTA LINHA NOVA AQUI */
+            width: 80px;
+            height: 8px;
+            background: #4f46e5;
+            border: 2px solid #ffffff;
+            outline: none;
+        }
+        
+
+        /* Estiliza o "puxador" da barra de volume */
+        #volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 16px;
+            background: #fcd34d;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+        }
