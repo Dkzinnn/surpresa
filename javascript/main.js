@@ -87,7 +87,7 @@ function verificarResposta(respostaEscolhida) {
 
                         <strong>Com amor,</strong><br>
                         <strong>Seu amigo,</strong><br>
-                        <strong>Hiago. ❤️</strong> 
+                        <strong>Hiago. ❤️ (pode se apaixonar agora)</strong> 
                     </p>`
                 }
         }
