@@ -1,5 +1,5 @@
 // --- LÓGICA DA PLAYLIST DE MÚSICAS ---
-const listaMusicas = ["songs/musica1.mp3.mp3", "songs/musica2.mp3.mp3", "songs/musica3.mp3.mp3"];
+const listaMusicas = ["songs/musica1.mp3.mp3", "songs/musica2.mp3.mp3", "songs/musica3.mp3.mp3", "songs/musica4.mp3.mp3", "songs/musica5.mp3.mp3"];
 let musicaAtualIndex = 0;
 
 // --- SUAS PERGUNTAS E TEXTOS ---
