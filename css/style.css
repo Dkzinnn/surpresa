@@ -288,3 +288,124 @@
         .carta-subindo {
             transform: translateY(-80px); /* Faz a carta subir 80 pixels */
         }
+/* Container dos botões do menu */
+#menu-navegacao {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+/* Botões do Menu (Igual ao botão de PLAY) */
+.btn-menu {
+    background-color: #fcd34d; /* Amarelo retro */
+    color: #000000;
+    border: 4px solid #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    padding: 12px 15px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+    text-transform: uppercase;
+}
+
+/* Efeito de afundar ao clicar */
+.btn-menu:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px #000000;
+}
+
+/* O fundo escuro quando a janela abre */
+.modal-escondido {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo bem escuro para focar na janela */
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* A caixa principal da janela retro */
+.caixa-retro {
+    /* ⚠️ ATENÇÃO: Se o degradê do seu site for diferente, cole a linha de 'background' dele exatamente aqui! */
+    background: linear-gradient(135deg, #1e293b, #090a0f); 
+    
+    border: 4px solid #ffffff;
+    box-shadow: 8px 8px 0px #000000;
+    width: 85%;
+    max-width: 500px;
+    max-height: 80vh;
+    padding: 25px;
+    position: relative;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive; /* Garante a fonte pixelada */
+    text-align: center;
+}
+
+/* Título das janelas */
+.caixa-retro h2 {
+    font-size: 14px;
+    color: #fcd34d;
+    text-shadow: 2px 2px 0px #000000;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* Botão de fechar (X) */
+.btn-fechar {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: #ef4444; /* Vermelho retro */
+    color: #ffffff;
+    border: 4px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.btn-fechar:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px #000000;
+}
+
+/* Barra de rolagem para quando houver muitos textos */
+.conteudo-scroll {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    text-align: left; /* Alinha os textos à esquerda para facilitar a leitura */
+}
+
+/* Cada pedaço de texto/momento (como se fossem cartinhas) */
+.card-retro {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    border: 2px solid #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.card-retro h3 {
+    margin-top: 0;
+    color: #fcd34d;
+    font-size: 12px;
+    text-shadow: 1px 1px 0px #000000;
+    line-height: 1.5;
+}
+
+.card-retro p {
+    font-size: 10px; /* Tamanho confortável para fontes pixeladas */
+    line-height: 1.8;
+    margin-bottom: 0;
+    color: #e2e8f0;
+}
