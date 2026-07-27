@@ -13,10 +13,11 @@
 <body>
     <!-- Botões Fixos na Tela -->
 <div id="menu-navegacao">
-    <button class="btn-menu" onclick="abrirJanela('janela-textos')">💌 Textos</button>
+    <button class="btn-menu" onclick="abrirJanela('janela-textos')">💌 Meus Textos</button>
     <button class="btn-menu" onclick="abrirJanela('janela-momentos')">💾 Momentos</button>
+    <!-- NOVO BOTÃO ADICIONADO ABAIXO -->
+    <button class="btn-menu" onclick="abrirJanela('janela-mensagens-dela')">💖 Mensagens Dela</button>
 </div>
-
 <!-- Janela de Textos (Escondida por padrão) -->
 <div id="janela-textos" class="modal-escondido">
     <div class="caixa-retro">
@@ -53,6 +54,31 @@
                 <p>Aquelas noites em que a gente perdia a noção do tempo em call e começava a falar um monte de bobeiras.</p>
             </div>
             <!-- Adicione mais Momentos aqui! -->
+        </div>
+    </div>
+</div>
+<!-- Janela de Mensagens Dela (Escondida por padrão) -->
+<div id="janela-mensagens-dela" class="modal-escondido">
+    <div class="caixa-retro">
+        <button class="btn-fechar" onclick="fecharJanela('janela-mensagens-dela')">X</button>
+        <h2>💖 O que você me disse</h2>
+        
+        <div class="conteudo-scroll">
+            
+            <!-- Exemplo de Mensagem 1 -->
+            <div class="card-retro">
+                <h3>Data ou Contexto (ex: Em uma madrugada)</h3>
+                <p>"esperando ela mandar....."</p>
+            </div>
+
+            <!-- Exemplo de Mensagem 2 -->
+            <div class="card-retro">
+                <h3>Aquele dia especial</h3>
+                <p>"Lembra quando você me mandou aquele texto? Eu guardei cada palavra. Você me disse: [Pensando]."</p>
+            </div>
+            
+            <!-- Você pode copiar e colar mais blocos <div class="card-retro"> aqui para adicionar mais mensagens! -->
+
         </div>
     </div>
 </div>
