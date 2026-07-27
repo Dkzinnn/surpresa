@@ -177,3 +177,16 @@ function abrirCarta() {
 
     }, 2000);
 }
+// Função para abrir o menu desejado
+function abrirJanela(idJanela) {
+    const janela = document.getElementById(idJanela);
+    // Muda o display de "none" para "flex" para aparecer na tela
+    janela.style.display = "flex"; 
+}
+
+// Função para fechar o menu
+function fecharJanela(idJanela) {
+    const janela = document.getElementById(idJanela);
+    // Muda o display de volta para "none" para esconder
+    janela.style.display = "none";
+}
