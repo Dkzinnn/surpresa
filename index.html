@@ -11,6 +11,51 @@
 </head>
 
 <body>
+    <!-- Botões Fixos na Tela -->
+<div id="menu-navegacao">
+    <button class="btn-menu" onclick="abrirJanela('janela-textos')">💌 Textos</button>
+    <button class="btn-menu" onclick="abrirJanela('janela-momentos')">💾 Momentos</button>
+</div>
+
+<!-- Janela de Textos (Escondida por padrão) -->
+<div id="janela-textos" class="modal-escondido">
+    <div class="caixa-retro">
+        <button class="btn-fechar" onclick="fecharJanela('janela-textos')">X</button>
+        <h2>💌 Textos para Você</h2>
+        
+        <div class="conteudo-scroll">
+            <div class="card-retro">
+                <h3>Para dias difíceis</h3>
+                <p>Sempre que as coisas ficarem difíceis, lembre-se de que você é incrível. Estarei aqui para te ouvir, igual a gente sempre faz.</p>
+            </div>
+            <div class="card-retro">
+                <h3>Um segredo</h3>
+                <p>Às vezes eu abro nosso chat só para reler umas mensagens e acabo sorrindo sozinho.</p>
+            </div>
+            <!-- Você pode adicionar quantos <div class="card-retro"> quiser aqui! -->
+        </div>
+    </div>
+</div>
+
+<!-- Janela de Momentos (Escondida por padrão) -->
+<div id="janela-momentos" class="modal-escondido">
+    <div class="caixa-retro">
+        <button class="btn-fechar" onclick="fecharJanela('janela-momentos')">X</button>
+        <h2>💾 Nossos Momentos (Save States)</h2>
+        
+        <div class="conteudo-scroll">
+            <div class="card-retro">
+                <h3>Slot 1: O Presente</h3>
+                <p>O dia em que decidi te dar o Spotify de presente só para quebrar a sua regra de não aceitar nada de ninguém. Deu certo!</p>
+            </div>
+            <div class="card-retro">
+                <h3>Slot 2: A Madrugada</h3>
+                <p>Aquelas noites em que a gente perdia a noção do tempo em call e começava a falar um monte de bobeira e safadezas.</p>
+            </div>
+            <!-- Adicione mais Momentos aqui! -->
+        </div>
+    </div>
+</div>
     <audio id="musica-fundo"  loop>
        <source src="songs/musica1.mp3.mp3" type="audio/mpeg">
     </audio>
