@@ -13,6 +13,7 @@
 <body>
     <!-- Botões Fixos na Tela -->
 <div id="menu-navegacao">
+    <button class="btn-menu" onclick="abrirJanela('janela-surpresa')">❓ Surpresa</button>
     <button class="btn-menu" onclick="abrirJanela('janela-textos')">💌 Meus Textos</button>
     <button class="btn-menu" onclick="abrirJanela('janela-momentos')">💾 Momentos</button>
     <!-- NOVO BOTÃO ADICIONADO ABAIXO -->
@@ -57,6 +58,28 @@
         </div>
     </div>
 </div>
+<!-- Janela da Pergunta Surpresa -->
+<div id="janela-surpresa" class="modal-escondido">
+    <div class="caixa-retro caixa-amor">
+        <button class="btn-fechar" onclick="fecharJanela('janela-surpresa')">X</button>
+        
+        <!-- Detalhe decorativo no topo -->
+        <div class="decoracao-coracao">♥ ♥ ♥</div>
+        
+        <h2 id="texto-pergunta">Você gosta de mim?</h2>
+        
+        <!-- Área dos botões -->
+        <div id="area-botoes" style="position: relative; width: 100%; height: 90px; margin-top: 15px;">
+            <button id="btn-sim" class="btn-menu" style="position: absolute; left: 15%; top: 10%;">SIM</button>
+            <button id="btn-nao" class="btn-menu" style="position: absolute; left: 55%; top: 10%;">NÃO</button>
+        </div>
+        
+        <!-- Textinho que aparece no final com a fonte correta -->
+        <p id="texto-final-surpresa"></p>
+        
+    </div>
+</div>
+
 <!-- Janela de Mensagens Dela (Escondida por padrão) -->
 <div id="janela-mensagens-dela" class="modal-escondido">
     <div class="caixa-retro">
@@ -82,7 +105,8 @@
            <div class="card-retro">
                 <h3>Uma das pessoas favoritas</h3>
                 <p>"Sou péssima com datas e horários, sua memória é melhor que a minha nisso. Mas me lembro o quanto foi e é gentil comigo, como me conforta e sempre me lembra de que não sou um incômodo e posso me abrir. Amo sua risada, seu sorriso me faz sorrir junto. É uma das minhas pessoas favoritas."</p>
-            </div>  
+            </div> 
+             
             <!-- Você pode copiar e colar mais blocos <div class="card-retro"> aqui para adicionar mais mensagens! -->
 
         </div>
