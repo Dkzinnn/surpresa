@@ -189,4 +189,42 @@ function fecharJanela(idJanela) {
     const janela = document.getElementById(idJanela);
     // Muda o display de volta para "none" para esconder
     janela.style.display = "none";
+    
+    /* =========================================
+   LÓGICA DO BOTÃO FUJÃO (JANELA SURPRESA)
+   ========================================= */
+
+const btnNao = document.getElementById("btn-nao");
+const btnSim = document.getElementById("btn-sim");
+const textoPergunta = document.getElementById("texto-pergunta");
+const areaBotoes = document.getElementById("area-botoes");
+
+// Evento que faz o botão NÃO fugir do mouse
+btnNao.addEventListener("mouseover", () => {
+    // Pega o tamanho máximo da área para o botão não fugir para fora da tela
+    const maxLargura = areaBotoes.clientWidth - btnNao.clientWidth;
+    const maxAltura = areaBotoes.clientHeight - btnNao.clientHeight;
+
+    // Gera posições X e Y aleatórias
+    const aleatorioX = Math.floor(Math.random() * maxLargura);
+    const aleatorioY = Math.floor(Math.random() * maxAltura);
+
+    // Aplica as novas posições no botão "NÃO" instantaneamente
+    btnNao.style.left = aleatorioX + "px";
+    btnNao.style.top = aleatorioY + "px";
+});
+
+// Ação para quando ela finalmente clicar no SIM
+btnSim.addEventListener("click", () => {
+    textoPergunta.innerText = "Eu sabia! ❤️"; // Muda o título
+    textoPergunta.style.color = "#ef4444"; // Deixa em destaque
+    
+    // Esconde os botões da brincadeira
+    btnNao.style.display = "none";
+    btnSim.style.display = "none";
+
+    // EXIBE O TEXTINHO ESPECIAL NO FINAL:
+    const textoFinal = document.getElementById("texto-final-surpresa");
+    textoFinal.innerHTML = "Mesmo se o botão fugisse para sempre, a resposta nunca mudaria. Obrigado por ser essa pessoa incrível e por fazer parte dos meus dias. Eu te amo muito, minha neném!";
+});
 }
